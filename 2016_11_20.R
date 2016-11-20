@@ -18,6 +18,11 @@ png("LinearRegressonWeightVsHeight.jpg")
 plot(x = height, y = weight)
 dev.off()
 
+# Visualizing the model
+png("LinearRegressonWeightVsHeight2.jpg")
+plot(x = height, y = weight, main = "Height vs Weight", xlab = "Height in cm", ylab = "Weight in Kg", cex = 1.3,
+     pch = 16, abline(lm(weight~height)))
+dev.off()
 
 # Using the model to predict the weight for height = 170
 a <- data.frame(height = 170)
