@@ -51,3 +51,10 @@ mpg.newData <- data.frame(cyl=6,wt=2.5,disp=250,hp=100)
 mpg.predicted <- predict(object = model.multipleRegression, newdata = mpg.newData)
 print(mpg.predicted)
 #########################################################
+# Logistic regression - glm()
+# Automatic/manual transmission for dataset mtcars
+
+# Creating the model
+model.logisticRegression <- glm(am~cyl+wt+hp, mtcars, family = binomial) # family = binomial for logistic regression
+print(model.logisticRegression)
+print(summary(model.logisticRegression))
